@@ -12,7 +12,7 @@ def main():
     phone_hardware = ImportModule.Hardware_Company
     phone_plumber = ImportModule.Plumber_Company
 
-    #creating search database with user input
+    #creating search database with user input and establishing the premise behind the program
     print("Our digitial phobnebook offers a library of phone numbers and services to its users!")
     print("""Search for one of our following services to continue: 
  - Towing Company, 
@@ -23,6 +23,7 @@ def main():
     #user types for the service they desire
     searcheng = input("Search:")
     #checks if the user input matches the databases options
+    #if input has a match with library it prints a phone number
     #this is not the most efficient way too do this but its the easiest
     if searcheng == ("towing"):
         print("Phone number:", phone_towing)
@@ -49,7 +50,7 @@ def main():
 
 #running the program initially
 main()
-#runs the program again if the user wants too
+#runs the program again if the user wants too, regardless of if the retrieve a phone number initially
 pop = input("Would you like to make another search?")
 if pop == ("yes"):
     main()
